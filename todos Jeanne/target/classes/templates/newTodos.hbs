@@ -1,0 +1,17 @@
+{{> header}}
+    <div class=" inverted sub header"><h2>New "todo"</h2></div>
+<form class="ui inverted form error" method="POST" action="/todos/addNew">
+
+    <div class="field">
+        <label>Id</label>
+        <input name="id" type="number" placeholder="id">
+    </div><div class="field">
+    <div class="field">
+        <label>Todo</label>
+        <input name="todo" type="text" placeholder="Todo...">
+    </div>
+    <div class="ui submit positive button"><i class="check circle outline icon"></i>Validate</div>
+
+    <a href="/todos/index"><div class="ui negative error button"><i class="times circle outline icon"></i>Cancel</div></a>
+</form>
+{{> footer}}

@@ -1,0 +1,15 @@
+{{> header}}
+    <div class=" inverted sub header"><h2>Edit "todo"</h2></div>
+{{#orga}}
+<form class="ui inverted form error" method="POST" action="/todos/edit/{{id}}">
+    <div class="field">
+        <label>Todos</label>
+        <input name="todo" type="text" placeholder="Todo..." value="{{todo}}">
+    </div>
+
+    <div class="ui submit positive button"><i class="check circle outline icon"></i>Validate</div>
+
+    <a href="/todos/index"><div class="ui negative error button"><i class="times circle outline icon"></i>Cancel</div></a>
+</form>
+{{/orga}}
+{{> footer}}

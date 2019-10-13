@@ -1,0 +1,34 @@
+{{> header}}
+<a class="ui black icon button" href="/todos/add"><i class="ui plus icon"></i> add todos</a>
+<table class="ui selectable inverted table" id="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Todos</th>
+      <th class="right aligned"></th>
+    </tr>
+  </thead>
+  <tbody id="recherche">
+      {{#todo}}
+    <tr data-id="{{id}}" class="detail">
+      <td>{{id}}</td>
+      <td>{{todo}}</td>
+      <td class="right aligned">
+      	<a class="ui inverted black icon button" href="/todos/edit/{{id}}"><i class="edit outline icon"></i></a>
+      	<a data-delete="{{id}}" class="ui red inverted icon button delete"><i class="trash alternate icon"></i></a>
+      </td>
+    </tr>
+    {{/todo}}
+  </tbody>
+  <tfoot>
+  	<tr>
+  		<th></th>
+  		<th></th>
+  		<th></th>
+  		<th></th>
+  		<th></th>
+  	</tr>
+  </tfoot>
+</table>
+<div id="ajout"></div>
+{{> footer}}
